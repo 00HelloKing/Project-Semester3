@@ -1,19 +1,13 @@
-# Guess a random number
+# Discount limitation
 # Author:Jin Kaifeng
 # ID: W20109678
 
-import random
-number = random.randint(10,20)
+age = input("Enter your age:")
 
-found=0
-
-x = input("Guess a Number:")
-while found == 0:
-	if int(x) == number:
-   		found=1
-	else:
-   		x = input("Wrong!Enter again:")
-
-# output
-print("Congradulations!")
-
+# age condition
+if int(age) <= 19:
+	print("Student Discounts")
+elif 20 <= int(age) <= 54:
+	print("No Age Discounts")
+else:
+	print("Senior Discounts")
